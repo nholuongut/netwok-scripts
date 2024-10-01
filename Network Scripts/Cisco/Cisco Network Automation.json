@@ -1,0 +1,85 @@
+{
+    "name": "My Cisco Network",
+    "description": "Automated network configuration for Cisco devices",
+    "devices": [{
+            "name": "Router1",
+            "type": "router",
+            "ip": "192.168.0.1",
+            "username": "admin",
+            "password": "password123",
+            "config": [{
+                    "command": "enable",
+                    "response": "Password:"
+                },
+                {
+                    "command": "cisco123",
+                    "response": "#"
+                },
+                {
+                    "command": "configure terminal",
+                    "response": "(config)#"
+                },
+                {
+                    "command": "interface gigabitethernet 0/0",
+                    "response": "(config-if)#"
+                },
+                {
+                    "command": "ip address 192.168.1.1 255.255.255.0",
+                    "response": "(config-if)#"
+                },
+                {
+                    "command": "no shutdown",
+                    "response": "(config-if)#"
+                },
+                {
+                    "command": "exit",
+                    "response": "(config)#"
+                },
+                {
+                    "command": "exit",
+                    "response": "#"
+                }
+            ]
+        },
+        {
+            "name": "Switch1",
+            "type": "switch",
+            "ip": "192.168.0.2",
+            "username": "admin",
+            "password": "password123",
+            "config": [{
+                    "command": "enable",
+                    "response": "Password:"
+                },
+                {
+                    "command": "cisco123",
+                    "response": "#"
+                },
+                {
+                    "command": "configure terminal",
+                    "response": "(config)#"
+                },
+                {
+                    "command": "interface gigabitethernet 0/1",
+                    "response": "(config-if)#"
+                },
+                {
+                    "command": "switchport mode access",
+                    "response": "(config-if)#"
+                },
+                {
+                    "command": "switchport access vlan 10",
+                    "response": "(config-if)#"
+                },
+                {
+                    "command": "exit",
+                    "response": "(config)#"
+                },
+                {
+                    "command": "exit",
+                    "response": "#"
+                }
+            ]
+        }
+    ]
+}

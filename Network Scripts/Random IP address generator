@@ -1,0 +1,20 @@
+import random
+import ipaddress
+
+# Prompt the user for the number of random IP addresses to generate
+n = int(input("Enter the number of random IP addresses to generate: "))
+
+# Create an empty list to store the random IP addresses
+random_ips = []
+
+# Use a loop to generate n random IP addresses
+for i in range(n):
+    # Generate a random IP address using the randint() function from the random module
+    # and the IPv4Address class from the ipaddress module
+    random_ip = ipaddress.IPv4Address(random.randint(0, 2**32-1))
+
+    # Add the random IP address to the list
+    random_ips.append(random_ip)
+
+# Print the list of random IP addresses
+print(random_ips)
